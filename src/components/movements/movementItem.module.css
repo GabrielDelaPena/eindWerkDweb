@@ -1,0 +1,27 @@
+.movItem {
+  height: 60px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px 0 40px;
+}
+
+.action {
+  width: 85px;
+  height: 20px;
+  text-align: center;
+  border-radius: 15px;
+  border-style: none;
+  color: white;
+  background-image: linear-gradient(
+    to left top,
+    rgb(57, 179, 133),
+    rgb(155, 225, 93)
+  );
+}
+
+.movBal {
+  font-size: 1.2rem;
+}

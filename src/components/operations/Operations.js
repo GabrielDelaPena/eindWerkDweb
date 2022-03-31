@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import style from "./operations.module.css";
 
 function Operations() {
-  return (
-    <div>Operations</div>
-  )
+  return <div className={style.operationContainer}>Operations</div>;
 }
 
-export default Operations
+export default Operations;

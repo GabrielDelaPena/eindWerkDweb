@@ -1,0 +1,14 @@
+.bankContainer {
+  width: 65vw;
+  margin: auto;
+  font-family: Poppins, sans-serif;
+  color: rgb(68, 68, 68);
+}
+
+.movOperContainer {
+  margin: 20px 0 0 0;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

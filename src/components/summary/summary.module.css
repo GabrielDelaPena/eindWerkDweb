@@ -1,0 +1,30 @@
+.sumContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 35px 0 0 0;
+  height: 35px;
+  width: 37vw;
+}
+
+.actionTest {
+  font-size: 0.7rem;
+}
+
+.inValue {
+  font-size: 1.3rem;
+  margin: 0 0 0 5px;
+  color: rgb(102, 200, 115);
+}
+
+.outValue {
+  font-size: 1.3rem;
+  margin: 0 0 0 5px;
+  color: rgb(245, 70, 93);
+}
+
+.interestValue {
+  font-size: 1.3rem;
+  margin: 0 0 0 5px;
+  color: rgb(102, 200, 115);
+}

@@ -26,7 +26,57 @@
 }
 
 .loginContainer {
-    border: 1px solid black;
-    width: 100%;
-    height: 65%;
+  width: 100%;
+  height: 60%;
+  margin: 25% 0 25% 0;
 }
+
+.loginTitle {
+  font-size: 1.5rem;
+  font-weight: 550;
+  margin: 0 0 30px 40px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField {
+  margin: 0 0 30px 0;
+  width: 60%;
+  height: 35px;
+  border-radius: 13px;
+  background-color: #d3d3d3;
+  border-style: none;
+  padding: 0 0 0 15px;
+  font-size: 1rem;
+}
+
+.inputField:focus {
+  outline: none;
+}
+
+.forgetPass {
+  margin: 0 0 40px 0;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: #444444;
+}
+
+.forgetPass:hover {
+  color: #bfbdbb;
+}
+
+.loginBtn {
+  width: 60%;
+  height: 35px;
+  border-radius: 20px;
+  border-style: none;
+  cursor: pointer;
+  background-color: #04c224;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+

@@ -11,18 +11,14 @@ function Login() {
         </div>
         <div className={style.formContainer}>
           <div className={style.loginContainer}>
-            <p>Member Login</p>
+            <p className={style.loginTitle}>Member Login</p>
             <form>
-              <div>
-                <label>Username</label>
-                <input type="text" />
+              <div className={style.inputs}>
+                <input className={style.inputField} type="text" placeholder="Username" />
+                <input className={style.inputField} type="password" placeholder="PIN" />
               </div>
-              <div>
-                <label>Password</label>
-                <input type="password" />
-              </div>
-              <p>Forget username/password?</p>
-              <button>LOGIN</button>
+              <p className={style.forgetPass}>Forget username/password?</p>
+              <button className={style.loginBtn}>LOGIN</button>
             </form>
           </div>
         </div>

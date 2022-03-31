@@ -1,0 +1,6 @@
+.movsContainer {
+  width: 40vw;
+  overflow: scroll;
+  background-color: white;
+  border-radius: 12px;
+}
