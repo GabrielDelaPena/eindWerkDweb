@@ -1,0 +1,22 @@
+.nav {
+    height: 70px;
+    background-color: white;
+}
+
+.listsContainer {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 0 auto;
+    width: 50%;
+    height: 70px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: #444444;
+}
+
+.listItem {
+    cursor: pointer;
+}
