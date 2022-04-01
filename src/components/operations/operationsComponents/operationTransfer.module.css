@@ -1,0 +1,46 @@
+.container {
+  height: 130px;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    to left top,
+    rgb(255, 176, 3),
+    rgb(255, 203, 3)
+  );
+}
+
+.transContainer {
+  margin: 33px 0 0 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-size: 1.1rem;
+  font-weight: 550;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.inputFields {
+  height: 32px;
+  width: 140px;
+  border-radius: 8px;
+  border-style: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.operationBtn {
+    width: 70px;
+    border-radius: 8px;
+    border-style: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
