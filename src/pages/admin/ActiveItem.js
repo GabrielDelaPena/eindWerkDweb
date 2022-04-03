@@ -1,7 +1,7 @@
-import React from "react";
+import { React } from "react";
 import style from "./activeItem.module.css";
 
-function ActiveItem() {
+function ActiveItem(props) {
   return (
     <div className={style.activeContainer}>
       <p className={style.accName}>Gabriel Dela Peña</p>

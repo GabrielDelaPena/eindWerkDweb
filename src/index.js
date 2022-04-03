@@ -4,9 +4,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
+import { AccountContextProvider } from "./contexts/accounts_contexts";
+
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <AccountContextProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </AccountContextProvider>,
   document.getElementById("root")
 );

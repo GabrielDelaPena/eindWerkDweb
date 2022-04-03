@@ -1,11 +1,20 @@
-import React from "react";
+import { React } from "react";
 import style from "./movementItem.module.css";
 
-function MovementItem() {
+function MovementItem(props) {
   return (
     <div className={style.movItem}>
-      <p className={style.action}>deposit</p>
-      <p className={style.movBal}>150€</p>
+      {props.mov > 0 ? (
+        <>
+          <p className={style.deposit}>deposit</p>
+          <p className={style.movBal}>{props.mov}€</p>
+        </>
+      ) : (
+        <>
+          <p className={style.withdrawal}>withdrawal</p>
+          <p className={style.movBal}>{props.mov}€</p>
+        </>
+      )}
     </div>
   );
 }
