@@ -1,6 +1,9 @@
 import { React, useContext, useEffect, useState } from "react";
 import style from "./movementsList.module.css";
 
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "../../firebase/firebase";
+
 import MovementItem from "./MovementItem";
 import AccountContext from "../../contexts/accounts_contexts";
 

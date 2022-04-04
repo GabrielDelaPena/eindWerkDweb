@@ -26,9 +26,8 @@ function Login() {
       return alert("Account does not exist.");
     }
 
-    accountCtx.setCurrentUser(findAccount);
-    accountCtx.setIsLoggedin(true);
-    accountCtx.setUpdateMovements(!accountCtx.updateMovements);
+    accountCtx.setCurrentUser(findAccount.username);
+    accountCtx.setUpdate(!accountCtx.update);
     navigate("/account");
   };
 

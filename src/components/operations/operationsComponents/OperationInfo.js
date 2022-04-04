@@ -5,7 +5,7 @@ import AccountContext from "../../../contexts/accounts_contexts";
 
 function OperationInfo() {
   const accountCtx = useContext(AccountContext);
-  const currentUser = accountCtx.currentUser;
+  const currentUser = accountCtx.currentAccount;
   return (
     <div className={style.container}>
       <div className={style.infoContainer}>

@@ -8,16 +8,19 @@ const AccountContext = createContext();
 export const AccountContextProvider = (props) => {
   const [accounts, setAccounts] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [update, setUpdate] = useState(true);
 
-  const [currentUser, setCurrentUser] = useState({});
-  const [isLoggedin, setIsLoggedin] = useState(false);
-
-  //   const [currMovements, setCurrMovements] = useState({});
-  const [updateMovements, setUpdateMovements] = useState(false);
-
-  const currentAccount = accounts.find(
-    (acc) => acc.username === currentUser.username
+  /** Localstorage */
+  const [isLoggedin, setIsLoggedin] = useState(
+    localStorage.getItem("isLoggedin")
   );
+  const [localAccount, setLocalAccount] = useState({});
+
+  /** Current account */
+  const [currentUser, setCurrentUser] = useState("");
+  const currentAccount = accounts.find((acc) => acc.username === currentUser);
+
+  /** My firebase collection(accounts) */
   const userCollectionRef = collection(db, "accounts");
 
   useEffect(() => {
@@ -27,7 +30,8 @@ export const AccountContextProvider = (props) => {
     };
 
     getAccounts();
-  }, [updateMovements]);
+    console.log("changes");
+  }, [update]);
 
   const value = {
     accounts: accounts,
@@ -39,13 +43,14 @@ export const AccountContextProvider = (props) => {
     isLoggedin: isLoggedin,
     setIsLoggedin: setIsLoggedin,
 
-    // currMovements: currMovements,
-    // setCurrMovements: setCurrMovements,
+    localAccount: localAccount,
+    setLocalAccount: setLocalAccount,
 
-    updateMovements: updateMovements,
-    setUpdateMovements: setUpdateMovements,
+    update: update,
+    setUpdate: setUpdate,
   };
 
+  console.log(currentAccount);
   if (loading) {
     return <h1>Loading...</h1>;
   }

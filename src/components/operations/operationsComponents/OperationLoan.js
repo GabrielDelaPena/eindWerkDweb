@@ -17,9 +17,8 @@ function OperationLoan() {
     const newMovements = { movements: [...movements, Number(enteredAmount)] };
 
     await updateDoc(accDoc, newMovements);
-
+    accountCtx.setUpdate(!accountCtx.update);
     amount.current.value = "";
-    accountCtx.setUpdateMovements(!accountCtx.updateMovements);
   };
 
   return (
