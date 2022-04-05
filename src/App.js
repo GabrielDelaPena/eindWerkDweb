@@ -13,7 +13,6 @@ import AccountContext from "./contexts/accounts_contexts";
 
 function App() {
   const accountCtx = useContext(AccountContext);
-
   return (
     <div className="App">
       <Nav />

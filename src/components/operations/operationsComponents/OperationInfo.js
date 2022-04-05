@@ -10,14 +10,22 @@ function OperationInfo() {
     <div className={style.container}>
       <div className={style.infoContainer}>
         <p className={style.labels}>
-          Name: <span className={style.userInfo}>{accountCtx.currentAccount.name}</span>
+          Name:{" "}
+          <span className={style.userInfo}>
+            {accountCtx.currentAccount.name}
+          </span>
+        </p>
+        <p className={style.labels}>
+          Adres:{" "}
+          <span className={style.userInfo}>
+            {accountCtx.currentAccount.adres}
+          </span>
         </p>
         <p className={style.labels}>
           BirthDate:
-          <span className={style.userInfo}>{accountCtx.currentAccount.birthyear}</span>
-        </p>
-        <p className={style.labels}>
-          Adres: <span className={style.userInfo}>{accountCtx.currentAccount.adres}</span>
+          <span className={style.userInfo}>
+            {accountCtx.currentAccount.birthyear}
+          </span>
         </p>
       </div>
     </div>

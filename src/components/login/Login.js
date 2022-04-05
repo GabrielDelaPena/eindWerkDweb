@@ -1,6 +1,7 @@
 import { React, useContext, useRef, useEffect } from "react";
 import style from "./login.module.css";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 import loginImage from "../../images/istockphoto-501534644-170667a.jpg";
 import AccountContext from "../../contexts/accounts_contexts";
@@ -40,7 +41,11 @@ function Login() {
   };
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <div className={style.container}>
         <div className={style.imgContainer}>
           <img className={style.image} src={loginImage} />
@@ -69,7 +74,7 @@ function Login() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

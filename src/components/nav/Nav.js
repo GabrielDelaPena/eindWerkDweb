@@ -31,13 +31,13 @@ function Nav() {
             <Link className={style.links} to="/comments">
               Comments
             </Link>
-            <Link className={style.links} to="/login">
+            <Link className={style.links + " " + style.loginBtn} to="/login">
               Login
             </Link>
           </>
         )}
         {accountCtx.isLoggedIn && (
-          <Link className={style.links} to="/login" onClick={logoutHandler}>
+          <Link className={style.links} to="/" onClick={logoutHandler}>
             Logout
           </Link>
         )}
