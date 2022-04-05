@@ -1,5 +1,6 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { React, useContext } from "react";
 
 import Nav from "./components/nav/Nav";
 import Bank from "./pages/bank/Bank";
@@ -8,8 +9,11 @@ import Login from "./components/login/Login";
 import Home from "./pages/website/home/Home";
 import Operations from "./pages/website/operations/Operations";
 import Comments from "./pages/website/comments/Comments";
+import AccountContext from "./contexts/accounts_contexts";
 
 function App() {
+  const accountCtx = useContext(AccountContext);
+
   return (
     <div className="App">
       <Nav />
@@ -19,7 +23,12 @@ function App() {
         <Route path="/comments" element={<Comments />} />
         <Route path="/login" element={<Login />} />
         <Route path="/account" element={<Bank />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route
+          path="/admin"
+          element={
+            accountCtx.adminLoggedin ? <Admin /> : <Navigate to="/login" />
+          }
+        />
       </Routes>
     </div>
   );

@@ -8,21 +8,39 @@ function Nav() {
   const accountCtx = useContext(AccountContext);
   const navigate = useNavigate();
 
-  // const logoutHandler = (e) => {
-  //   e.preventDefault();
-
-  //   accountCtx.setCurrentUser({});
-  //   accountCtx.setIsLoggedin(false);
-  //   navigate("login");
-  // };
+  const logoutHandler = (e) => {
+    e.preventDefault();
+    accountCtx.setCurrentUser("");
+    accountCtx.setIsLoggedin(false);
+    accountCtx.setAdminLoggedin(false);
+    console.log("logout");
+    navigate("/");
+  };
 
   return (
     <nav className={style.nav}>
       <ul className={style.listsContainer}>
-        <Link to="/">Home</Link>
-        <Link to="/operations">Operations</Link>
-        <Link to="/comments">Comments</Link>
-        <Link to="/login">Login</Link>
+        {!accountCtx.isLoggedIn && (
+          <>
+            <Link className={style.links} to="/">
+              Home
+            </Link>
+            <Link className={style.links} to="/operations">
+              Operations
+            </Link>
+            <Link className={style.links} to="/comments">
+              Comments
+            </Link>
+            <Link className={style.links} to="/login">
+              Login
+            </Link>
+          </>
+        )}
+        {accountCtx.isLoggedIn && (
+          <Link className={style.links} to="/login" onClick={logoutHandler}>
+            Logout
+          </Link>
+        )}
       </ul>
     </nav>
   );

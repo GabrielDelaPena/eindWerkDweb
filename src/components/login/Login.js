@@ -22,11 +22,19 @@ function Login() {
       (acc) => acc.username === enteredUsername && acc.pin === enteredPin
     );
 
+    if (enteredUsername === "admin" && enteredPin === "8246") {
+      accountCtx.setIsLoggedin(true);
+      accountCtx.setAdminLoggedin(true);
+      navigate("/admin");
+      return alert("Admin logged in.");
+    }
+
     if (!findAccount) {
       return alert("Account does not exist.");
     }
-    
+
     accountCtx.setCurrentUser(findAccount.username);
+    accountCtx.setIsLoggedin(true);
     accountCtx.setUpdate(!accountCtx.update);
     navigate("/account");
   };

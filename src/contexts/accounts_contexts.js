@@ -9,14 +9,14 @@ export const AccountContextProvider = (props) => {
   const [accounts, setAccounts] = useState([]);
   const [loading, setLoading] = useState(false);
   const [update, setUpdate] = useState(true);
-
-  /** Localstorage */
-  let [isLoggedIn, setIsLoggedin] = useState(false);
-  const [localAccount, setLocalAccount] = useState({});
+  const [adminLoggedin, setAdminLoggedin] = useState(false);
 
   /** Current account */
   const [currentUser, setCurrentUser] = useState("");
-  const currentAccount = accounts.find((acc) => acc.username === currentUser);
+  const currentAccount = accounts.find((acc) => acc.username === currentUser)
+    ? accounts.find((acc) => acc.username === currentUser)
+    : {};
+  const [isLoggedIn, setIsLoggedin] = useState(false);
 
   /** My firebase collection(accounts) */
   const userCollectionRef = collection(db, "accounts");
@@ -31,6 +31,9 @@ export const AccountContextProvider = (props) => {
     console.log("changes");
   }, [update]);
 
+  console.log(currentAccount);
+  console.log(isLoggedIn);
+
   const value = {
     accounts: accounts,
     currentAccount: currentAccount,
@@ -41,11 +44,11 @@ export const AccountContextProvider = (props) => {
     isLoggedIn: isLoggedIn,
     setIsLoggedin: setIsLoggedin,
 
-    localAccount: localAccount,
-    setLocalAccount: setLocalAccount,
-
     update: update,
     setUpdate: setUpdate,
+
+    adminLoggedin: adminLoggedin,
+    setAdminLoggedin: setAdminLoggedin,
   };
 
   if (loading) {

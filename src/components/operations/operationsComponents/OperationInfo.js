@@ -5,24 +5,19 @@ import AccountContext from "../../../contexts/accounts_contexts";
 
 function OperationInfo() {
   const accountCtx = useContext(AccountContext);
-  const currentUser = accountCtx.currentAccount;
 
-  // useEffect(() => {
-  //   console.log(currentUser);
-  //   console.log("changes account");
-  // }, [accountCtx.update]);
   return (
     <div className={style.container}>
       <div className={style.infoContainer}>
         <p className={style.labels}>
-          Name: <span className={style.userInfo}>{currentUser.name}</span>
+          Name: <span className={style.userInfo}>{accountCtx.currentAccount.name}</span>
         </p>
         <p className={style.labels}>
           BirthDate:
-          <span className={style.userInfo}>{currentUser.birthyear}</span>
+          <span className={style.userInfo}>{accountCtx.currentAccount.birthyear}</span>
         </p>
         <p className={style.labels}>
-          Adres: <span className={style.userInfo}>{currentUser.adres}</span>
+          Adres: <span className={style.userInfo}>{accountCtx.currentAccount.adres}</span>
         </p>
       </div>
     </div>
