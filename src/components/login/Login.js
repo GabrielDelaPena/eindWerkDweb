@@ -25,7 +25,7 @@ function Login() {
     if (!findAccount) {
       return alert("Account does not exist.");
     }
-
+    
     accountCtx.setCurrentUser(findAccount.username);
     accountCtx.setUpdate(!accountCtx.update);
     navigate("/account");

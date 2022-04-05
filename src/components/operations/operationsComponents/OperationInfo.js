@@ -1,4 +1,4 @@
-import { React, useContext } from "react";
+import { React, useContext, useEffect } from "react";
 import style from "./operationInfo.module.css";
 
 import AccountContext from "../../../contexts/accounts_contexts";
@@ -6,6 +6,11 @@ import AccountContext from "../../../contexts/accounts_contexts";
 function OperationInfo() {
   const accountCtx = useContext(AccountContext);
   const currentUser = accountCtx.currentAccount;
+
+  // useEffect(() => {
+  //   console.log(currentUser);
+  //   console.log("changes account");
+  // }, [accountCtx.update]);
   return (
     <div className={style.container}>
       <div className={style.infoContainer}>

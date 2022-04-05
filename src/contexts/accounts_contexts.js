@@ -11,9 +11,7 @@ export const AccountContextProvider = (props) => {
   const [update, setUpdate] = useState(true);
 
   /** Localstorage */
-  const [isLoggedin, setIsLoggedin] = useState(
-    localStorage.getItem("isLoggedin")
-  );
+  let [isLoggedIn, setIsLoggedin] = useState(false);
   const [localAccount, setLocalAccount] = useState({});
 
   /** Current account */
@@ -40,7 +38,7 @@ export const AccountContextProvider = (props) => {
     currentUser: currentUser,
     setCurrentUser: setCurrentUser,
 
-    isLoggedin: isLoggedin,
+    isLoggedIn: isLoggedIn,
     setIsLoggedin: setIsLoggedin,
 
     localAccount: localAccount,
@@ -50,7 +48,6 @@ export const AccountContextProvider = (props) => {
     setUpdate: setUpdate,
   };
 
-  console.log(currentAccount);
   if (loading) {
     return <h1>Loading...</h1>;
   }
