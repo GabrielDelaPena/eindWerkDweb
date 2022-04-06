@@ -8,7 +8,9 @@ function Home() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      Home
+      <div>
+        <p>Home</p>
+      </div>
     </motion.div>
   );
 }

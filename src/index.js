@@ -5,12 +5,15 @@ import "./index.css";
 import App from "./App";
 
 import { AccountContextProvider } from "./contexts/accounts_contexts";
+import { CommentContextProvider } from "./pages/website/comments/comments-context";
 
 ReactDOM.render(
-  <AccountContextProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </AccountContextProvider>,
+  <CommentContextProvider>
+    <AccountContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </AccountContextProvider>
+  </CommentContextProvider>,
   document.getElementById("root")
 );

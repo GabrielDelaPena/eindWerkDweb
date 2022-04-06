@@ -1,0 +1,44 @@
+.container {
+  width: 60vw;
+  height: 70vh;
+  background-color: white;
+  border-radius: 15px;
+  margin: 80px auto 0 auto;
+}
+
+.section {
+  width: 75%;
+  height: 60%;
+  padding: 120px 0 0 0;
+  margin: 0 auto 0 auto;
+}
+
+.title {
+  margin: 0 0 30px 0;
+  font-size: 1.7rem;
+}
+
+.comment {
+  margin: 0 0 30px 0;
+  font-size: 1.2rem;
+}
+
+.user {
+  font-size: 1.2rem;
+}
+
+.btnContainer {
+  margin: 30px auto 0 auto;
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.btn {
+  width: 45px;
+  height: 25px;
+  border-style: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
