@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import style from "./comments.module.css";
 
 import CommentContext from "./comments-context";
+import Comment from "./Comment";
 
 function Comments() {
   const commentCtx = useContext(CommentContext);
 
-  console.log(commentCtx.currentComment);
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -15,29 +15,30 @@ function Comments() {
       exit={{ opacity: 0 }}
     >
       <div className={style.container}>
-        <div className={style.section}>
-          <p className={style.title}>{commentCtx.currentComment.title}</p>
-          <p className={style.comment}>{commentCtx.currentComment.comment}</p>
-          <p className={style.user}>{commentCtx.currentComment.user}</p>
-          <div className={style.btnContainer}>
-            <button
-              className={style.btn}
-              onClick={commentCtx.prevCommentHandler}
-              disabled={commentCtx.currentComment.index === 0}
+        {commentCtx.comments.map((com, i) => {
+          return (
+            <div
+              key={i}
+              className={i === commentCtx.current ? "slide active" : "slide"}
             >
-              ⬅
-            </button>
-            <button
-              className={style.btn}
-              onClick={commentCtx.nextCommentHandler}
-              disabled={
-                commentCtx.currentComment.index ===
-                commentCtx.comments.length - 1
-              }
-            >
-              ➡
-            </button>
-          </div>
+              {i === commentCtx.current && (
+                <Comment
+                  key={com.id}
+                  title={com.title}
+                  comment={com.comment}
+                  user={com.user}
+                />
+              )}
+            </div>
+          );
+        })}
+        <div className={style.btnContainer}>
+          <button className={style.btn} onClick={commentCtx.prevSlide}>
+            ⬅
+          </button>
+          <button className={style.btn} onClick={commentCtx.nextSlide}>
+            ➡
+          </button>
         </div>
       </div>
     </motion.div>

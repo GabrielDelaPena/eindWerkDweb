@@ -29,26 +29,26 @@ export const CommentContextProvider = (props) => {
       user: "Patrick Star",
     },
   ]);
-  const [currentComment, setCurrentComment] = useState(comments[0]);
+  const length = comments.length;
+  const [current, setCurrent] = useState(0);
 
-  const nextCommentHandler = () => {
-    const newIndex = currentComment.index + 1;
-    setCurrentComment(comments[newIndex]);
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
-    const prevCommentHandler = () => {
-      const newIndex = currentComment.index - 1;
-      setCurrentComment(comments[newIndex]);
-    };
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
 
   const value = {
     comments: comments,
+    setComments: setComments,
 
-    currentComment: currentComment,
-    setCurrentComment: setCurrentComment,
+    nextSlide: nextSlide,
+    prevSlide: prevSlide,
 
-    nextCommentHandler: nextCommentHandler,
-    prevCommentHandler: prevCommentHandler,
+    length: length,
+    current: current,
   };
   return (
     <CommentContext.Provider value={value}>
