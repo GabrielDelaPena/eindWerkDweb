@@ -1,0 +1,45 @@
+.container {
+  width: 90%;
+  margin: 110px auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  color: #444;
+  font-family: "Poppins", sans-serif;
+}
+
+.left_section {
+  width: 50%;
+  padding: 0 0 0 50px;
+}
+
+.title {
+  margin: 40px 0 0 0;
+  font-size: 3.1rem;
+  font-weight: 750;
+}
+
+.hightlight {
+  background: linear-gradient(to bottom, transparent 75%, #5ec576 25%);
+}
+
+.sub_title {
+  margin: 40px 0 0 0;
+  font-size: 1.4rem;
+}
+
+.link {
+  width: 90px;
+  margin: 40px 0 0 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #5ec576;
+  border-bottom: #5ec576 2px solid;
+}
+
+.right_section {
+}
+
+.image {
+  width: 400px;
+  margin: 0 0 0 90px;
+}
