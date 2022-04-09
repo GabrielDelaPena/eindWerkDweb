@@ -1,12 +1,18 @@
 import { React, useContext } from "react";
 import { motion } from "framer-motion";
 import style from "./comments.module.css";
+import { useNavigate } from "react-router-dom";
 
 import CommentContext from "./comments-context";
 import Comment from "./Comment";
 
 function Comments() {
   const commentCtx = useContext(CommentContext);
+  const navigate = useNavigate();
+
+  const navigateTo = () => {
+    navigate("/addcomment");
+  };
 
   return (
     <motion.div
@@ -40,6 +46,9 @@ function Comments() {
             ➡
           </button>
         </div>
+        <button className={style.btnAdd} onClick={navigateTo}>
+          Add comment
+        </button>
       </div>
     </motion.div>
   );

@@ -10,6 +10,7 @@ import Home from "./pages/website/home/Home";
 import Operations from "./pages/website/operations/Operations";
 import Comments from "./pages/website/comments/Comments";
 import AccountContext from "./contexts/accounts_contexts";
+import AddComment from "./pages/website/comments/AddComment";
 
 function App() {
   const accountCtx = useContext(AccountContext);
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" exact element={<Home />} />
         <Route path="/operations" element={<Operations />} />
         <Route path="/comments" element={<Comments />} />
+        <Route path="/addcomment" element={<AddComment />} />
         <Route path="/login" element={<Login />} />
         <Route path="/account" element={<Bank />} />
         <Route
