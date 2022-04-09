@@ -10,9 +10,11 @@ function Nav() {
 
   const logoutHandler = (e) => {
     e.preventDefault();
+
     accountCtx.setCurrentUser("");
     accountCtx.setIsLoggedin(false);
     accountCtx.setAdminLoggedin(false);
+
     console.log("logout");
     navigate("/");
   };

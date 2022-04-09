@@ -16,16 +16,20 @@ function OperationTransfer() {
   /** Setting up firebase/database */
   const addPositiveMov = async (id, movements) => {
     const enteredAmount = inputAmount.current.value;
+
     const accDoc = doc(db, "accounts", id);
     const newMovements = { movements: [...movements, Number(enteredAmount)] };
     await updateDoc(accDoc, newMovements);
+
     accountCtx.setUpdate(!accountCtx.update);
+
     inputAmount.current.value = "";
     inputAccount.current.value = "";
   };
 
   const addNegativeMov = async (id, movements) => {
     const enteredAmount = inputAmount.current.value;
+
     const accDoc = doc(db, "accounts", id);
     const newMovements = { movements: [...movements, -Number(enteredAmount)] };
     await updateDoc(accDoc, newMovements);
@@ -34,6 +38,7 @@ function OperationTransfer() {
   /** Transfer money */
   const transferMoney = () => {
     const enteredAccount = inputAccount.current.value;
+    
     const targetAccount = accountCtx.accounts.find(
       (acc) => acc.username === enteredAccount
     );

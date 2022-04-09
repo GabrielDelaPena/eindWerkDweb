@@ -1,9 +1,12 @@
 import { React, useContext } from "react";
-import style from "./activeItem.module.css";
-import { doc, deleteDoc } from "firebase/firestore";
 
+/** Firebase imports */
+import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebase";
+
+import style from "./activeItem.module.css";
 import AccountContext from "../../contexts/accounts_contexts";
+
 
 function ActiveItem(props) {
   const accountCtx = useContext(AccountContext);

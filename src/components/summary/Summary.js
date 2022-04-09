@@ -21,6 +21,7 @@ function Summary() {
       .reduce((acc, sum) => acc + sum, 0);
     return total;
   };
+
   return (
     <div className={style.sumContainer}>
       <div className={style.in}>

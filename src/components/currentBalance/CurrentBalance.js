@@ -1,10 +1,12 @@
 import { React, useContext } from "react";
-import style from "./currentBalance.module.css";
 
+import style from "./currentBalance.module.css";
 import AccountContext from "../../contexts/accounts_contexts";
 
 function CurrentBalance() {
   const accountCtx = useContext(AccountContext);
+
+  /** Date */
   let today = new Date();
   let date =
     today.getDate() + "/" + (today.getMonth() + 1) + "/" + today.getFullYear();

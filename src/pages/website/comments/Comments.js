@@ -1,8 +1,8 @@
 import { React, useContext } from "react";
 import { motion } from "framer-motion";
-import style from "./comments.module.css";
 import { useNavigate } from "react-router-dom";
 
+import style from "./comments.module.css";
 import CommentContext from "./comments-context";
 import Comment from "./Comment";
 

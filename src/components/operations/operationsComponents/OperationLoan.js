@@ -1,8 +1,9 @@
 import { React, useContext, useRef, useEffect } from "react";
 import style from "./operationLoan.module.css";
-import { useNavigate } from "react-router-dom";
 
 import AccountContext from "../../../contexts/accounts_contexts";
+
+/** Firebase imports */
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../../firebase/firebase";
 

@@ -1,12 +1,13 @@
 import { React, useRef, useContext } from "react";
-import style from "./addcomment.module.css";
 import { useNavigate } from "react-router-dom";
 
 import CommentContext from "./comments-context";
+import style from "./addcomment.module.css";
 
 function AddComment() {
   const commentCtx = useContext(CommentContext);
   const navigate = useNavigate();
+
   const name = useRef();
   const title = useRef();
   const comment = useRef();

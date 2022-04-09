@@ -1,8 +1,8 @@
 import { React, useContext, useRef, useEffect } from "react";
-import style from "./login.module.css";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
+import style from "./login.module.css";
 import loginImage from "../../images/istockphoto-501534644-170667a.jpg";
 import AccountContext from "../../contexts/accounts_contexts";
 
