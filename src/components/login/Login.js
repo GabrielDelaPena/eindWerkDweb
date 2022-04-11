@@ -48,7 +48,7 @@ function Login() {
     >
       <div className={style.container}>
         <div className={style.imgContainer}>
-          <img className={style.image} src={loginImage} />
+          <img className={style.image} src={loginImage} alt="login"/>
         </div>
         <div className={style.formContainer}>
           <div className={style.loginContainer}>
