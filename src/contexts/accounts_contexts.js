@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { React, createContext, useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 
