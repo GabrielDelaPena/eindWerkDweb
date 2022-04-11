@@ -14,3 +14,26 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BANKING_APP_9153B }}'
           projectId: banking-app-9153b
+      - name: Archive Build
+        uses: actions/upload-artifact@v2
+        with: 
+          name: build
+          path: build
+          
+  deploy:
+    name: Deploy
+    needs: build_and_preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Download Build
+        uses: actions/download-artifact@v2
+        with: 
+          name: build
+          path: build
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
