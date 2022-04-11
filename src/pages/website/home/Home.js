@@ -34,7 +34,7 @@ function Home() {
         </div>
 
         <div className={style.right_section}>
-          <img src={image_1} className={style.image} />
+          <img src={image_1} className={style.image} alt="home-image"/>
         </div>
       </div>
     </motion.div>

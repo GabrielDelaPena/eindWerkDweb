@@ -1,10 +1,8 @@
 import { React, useContext } from "react";
 import style from "./comments.module.css";
 
-import CommentContext from "./comments-context";
 
 function Comment(props) {
-  const commentCtx = useContext(CommentContext);
 
   return (
     <div>

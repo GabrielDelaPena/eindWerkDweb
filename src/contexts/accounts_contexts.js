@@ -49,6 +49,8 @@ export const AccountContextProvider = (props) => {
 
     adminLoggedin: adminLoggedin,
     setAdminLoggedin: setAdminLoggedin,
+
+    setLoading: setLoading,
   };
 
   if (loading) {

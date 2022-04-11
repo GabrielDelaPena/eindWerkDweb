@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import style from "./operation.module.css";
 
 function Operations() {
-  const [operations, setOperations] = useState([
+  const operations = [
     {
       title: "Tranfser money to anyone, instantly! No fees, no BS.",
       description:
@@ -15,7 +15,19 @@ function Operations() {
       description:
         "Without taking out loans, many of us would not be able to buy a home, a car or afford a higher education. With Banking App made it possible to loan money easier than before, just ask for amount of loan and youll never regret it. These is the future so join now.",
     },
-  ]);
+  ]
+  // const [operations, setOperations] = useState([
+  //   {
+  //     title: "Tranfser money to anyone, instantly! No fees, no BS.",
+  //     description:
+  //       "Transfer money is never been easier than before. People can now rapidly transfer money between equity funds and cash accounts. And it transfers money instantly from a customer's account to a biller's. This is the future so join now.",
+  //   },
+  //   {
+  //     title: "Buy a home or make your dreams come true, with instant loans.",
+  //     description:
+  //       "Without taking out loans, many of us would not be able to buy a home, a car or afford a higher education. With Banking App made it possible to loan money easier than before, just ask for amount of loan and youll never regret it. These is the future so join now.",
+  //   },
+  // ]);
   const [current, setCurrent] = useState(operations[0]);
 
   const showTransfer = () => {

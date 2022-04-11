@@ -1,4 +1,4 @@
-import { React, useContext, useRef, useEffect } from "react";
+import { React, useContext, useRef } from "react";
 import style from "./operationLoan.module.css";
 
 import AccountContext from "../../../contexts/accounts_contexts";
