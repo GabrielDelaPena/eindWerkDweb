@@ -32,9 +32,6 @@ export const AccountContextProvider = (props) => {
     console.log("changes");
   }, [update]);
 
-  console.log(currentAccount);
-  console.log(isLoggedIn);
-
   const value = {
     accounts: accounts,
     currentAccount: currentAccount,
