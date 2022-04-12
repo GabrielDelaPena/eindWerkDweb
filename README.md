@@ -68,3 +68,85 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+*************************************************************************************************************************************
+
+
+** Info over project ** 
+
+
+Dit project zal een soort van bankapplicatie zijn, waar je dus uw saldo kunt zien en waar je bedragennaar elkaar kunt sturen. Er zal ook een login zijn, zodat mensen in- en uit kunnen loggen, dit zorgt ervoor dat het beveiligd is. Ik zal gebruik maken van react, html en css. 
+
+Daarnaast zal er ook een website zijn, deze website zal meer een soort van een landing page zijn, waar nieuwe bezoekers informatie kunnen vinden over bank, banking app, etc.. Men zal daar ook contact gegevens terug kunnen vinden. Daarnaast zal de website, geanimeerd zijn door middel van javascript. 
+
+De admin kan ook zich inloggen, als admin is het mogelijk om een account te verwijderen.
+
+
+** Inlog gegevens ** 
+
+
+username: hans
+pin: 1111
+
+username: jan
+pin: 2222
+
+username: gill
+pin: 3333
+
+username: lara
+pin: 4444
+
+username: jana
+pin: 5555
+
+** Admin gegevens **
+
+
+username: admin
+pin: 8246
+
+
+** Website Bronnen **
+
+
+Web app url
+
+https://banking-app-9153b.web.app/
+
+Styling color operatons
+
+https://widgetcore.com/25-most-used-css-gradient-examples/
+
+Styling flex box 
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+CRUD operation in Firebase
+
+https://www.youtube.com/watch?v=jCY6DH8F4oc&t=2264s
+
+Styling highlight letters
+
+https://www.youtube.com/watch?v=WKgkWL7RXXQ
+
+React framer motion
+
+https://www.youtube.com/watch?v=FdrEjwymzdY
+
+Deploy website/webapp
+
+https://www.youtube.com/watch?v=kLEp5tGDqcI 
+
+Deploying react app with firebase
+
+https://www.youtube.com/watch?v=kLEp5tGDqcI&feature=emb_title
+
+Firebase
+
+https://firebase.google.com/
+
+
+
+
+
