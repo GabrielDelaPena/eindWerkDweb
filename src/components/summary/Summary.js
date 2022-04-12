@@ -22,6 +22,12 @@ function Summary() {
     return total;
   };
 
+  /** Sum of total balance using reduce. */
+  const curBalance = accountCtx.currentAccount.movements.reduce(
+    (acc, sum) => acc + sum,
+    0
+  );
+
   return (
     <div className={style.sumContainer}>
       <div className={style.in}>
@@ -38,8 +44,8 @@ function Summary() {
       </div>
       <div className={style.interest}>
         <p className={style.actionTest}>
-          INTEREST
-          <span className={style.interestValue}>50,20€</span>
+          BALANCE
+          <span className={style.interestValue}>{curBalance}€</span>
         </p>
       </div>
     </div>

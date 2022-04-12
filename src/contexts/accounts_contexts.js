@@ -29,7 +29,6 @@ export const AccountContextProvider = (props) => {
     };
 
     getAccounts();
-    console.log("changes");
   }, [update]);
 
   const value = {

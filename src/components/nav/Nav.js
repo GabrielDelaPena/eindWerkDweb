@@ -15,7 +15,6 @@ function Nav() {
     accountCtx.setIsLoggedin(false);
     accountCtx.setAdminLoggedin(false);
 
-    console.log("logout");
     navigate("/");
   };
 

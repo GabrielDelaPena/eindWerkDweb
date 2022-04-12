@@ -18,7 +18,7 @@ function OperationTransfer() {
     const enteredAmount = inputAmount.current.value;
 
     const accDoc = doc(db, "accounts", id);
-    const newMovements = { movements: [...movements, Number(enteredAmount)] };
+    const newMovements = { movements: [Number(enteredAmount), ...movements] };
     await updateDoc(accDoc, newMovements);
 
     accountCtx.setUpdate(!accountCtx.update);
@@ -31,14 +31,15 @@ function OperationTransfer() {
     const enteredAmount = inputAmount.current.value;
 
     const accDoc = doc(db, "accounts", id);
-    const newMovements = { movements: [...movements, -Number(enteredAmount)] };
+    const newMovements = { movements: [-Number(enteredAmount), ...movements] };
     await updateDoc(accDoc, newMovements);
   };
 
   /** Transfer money */
   const transferMoney = () => {
+    const enteredAmount = inputAmount.current.value;
     const enteredAccount = inputAccount.current.value;
-    
+
     const targetAccount = accountCtx.accounts.find(
       (acc) => acc.username === enteredAccount
     );
@@ -55,6 +56,15 @@ function OperationTransfer() {
       return alert("You can not send money to your own.");
     }
 
+    if (
+      accountCtx.currentAccount.movements.reduce((acc, sum) => acc + sum, 0) <
+      enteredAmount
+    ) {
+      inputAmount.current.value = "";
+      inputAccount.current.value = "";
+      return alert("Your balance is not enough.");
+    }
+    
     addNegativeMov(
       accountCtx.currentAccount.id,
       accountCtx.currentAccount.movements

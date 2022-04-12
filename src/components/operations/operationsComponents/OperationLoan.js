@@ -15,7 +15,15 @@ function OperationLoan() {
   const addMovement = async (id, movements) => {
     const enteredAmount = amount.current.value;
     const accDoc = doc(db, "accounts", id);
-    const newMovements = { movements: [...movements, Number(enteredAmount)] };
+    const newMovements = { movements: [Number(enteredAmount), ...movements] };
+
+    if (
+      accountCtx.currentAccount.movements.reduce((acc, sum) => acc + sum, 0) <=
+      0
+    ) {
+      amount.current.value = "";
+      return alert("Your balance is under or is 0 and may not request loan.");
+    }
 
     await updateDoc(accDoc, newMovements);
     accountCtx.setUpdate(!accountCtx.update);
