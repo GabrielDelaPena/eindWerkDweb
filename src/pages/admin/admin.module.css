@@ -2,7 +2,12 @@
   height: 70vh;
   width: 35vw;
   margin: 50px auto 0 auto;
-  overflow: scroll;
   background-color: white;
   border-radius: 10px;
+  overflow: scroll;
+}
+
+.mid {
+  margin: 20px 0 20px 0;
+  text-align: center;
 }

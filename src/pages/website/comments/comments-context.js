@@ -21,6 +21,7 @@ export const CommentContextProvider = (props) => {
     };
 
     getComments();
+    console.log("comments updated");
   }, [updateComment]);
 
   const addComment = async (user, title, comment) => {

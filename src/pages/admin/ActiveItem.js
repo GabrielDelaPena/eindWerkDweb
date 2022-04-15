@@ -10,6 +10,7 @@ import AccountContext from "../../contexts/accounts_contexts";
 
 function ActiveItem(props) {
   const accountCtx = useContext(AccountContext);
+  
   const deleteHandler = async (id) => {
     const userDoc = doc(db, "accounts", id);
     await deleteDoc(userDoc);

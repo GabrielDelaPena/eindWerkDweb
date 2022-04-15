@@ -29,6 +29,7 @@ export const AccountContextProvider = (props) => {
     };
 
     getAccounts();
+    console.log("updated");
   }, [update]);
 
   const value = {
